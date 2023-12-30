@@ -1,0 +1,95 @@
+.subTicket h2 {
+  margin-bottom: 100px;
+}
+.subTicket .searchBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.subTicket .btns button {
+  padding: 1rem 2rem;
+  font-size: 0.9em;
+  position: relative;
+}
+.subTicket .btns button:hover {
+  font-weight: 600;
+}
+.subTicket .btns button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1.5px;
+  background-color: var(--point1);
+  display: none;
+}
+.subTicket .btns button.on {
+  color: var(--point1);
+  font-weight: bold;
+}
+.subTicket .btns button.on::before {
+  display: block;
+}
+.subTicket .inputCon {
+  width: 30%;
+  border: 2px solid var(--gray4);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.subTicket .inputCon input {
+  border: none;
+  width: 100%;
+  padding: 1rem 0 1rem 2rem;
+  width: 90%;
+}
+.subTicket .inputCon input:focus {
+  border: none;
+  outline: none;
+}
+.subTicket .inputCon > button {
+  width: 10%;
+}
+
+.subTicket .title {
+  display: flex;
+  background-color: var(--gray1);
+  border-top: 2px solid var(--gray4);
+  border-bottom: 1px solid var(--gray3);
+}
+.subTicket .title > p {
+  padding: 2.5rem 0;
+  font-weight: 600;
+  text-align: center;
+}
+.subTicket .title > p:nth-of-type(1),
+.subTicket > ul > li:nth-of-type(1) {
+  width: 12%;
+}
+.subTicket .title > p:nth-of-type(2),
+.subTicket > ul > li:nth-of-type(2) {
+  width: 59%;
+}
+.subTicket .title > p:nth-of-type(3),
+.subTicket > ul > li:nth-of-type(3) {
+  width: 17%;
+}
+.subTicket .title > p:nth-of-type(4),
+.subTicket > ul > li:nth-of-type(4) {
+  width: 12%;
+}
+
+.subTicket > ul {
+  display: flex;
+}
+.subTicket > ul > li {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid var(--gray3);
+}
+.subTicket > ul > li:nth-of-type(2) {
+  text-align: left;
+  cursor: pointer;
+}

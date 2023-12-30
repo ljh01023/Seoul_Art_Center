@@ -1,0 +1,177 @@
+.subRank h2 {
+  margin-bottom: 100px;
+}
+
+.subRank nav > ul {
+  display: flex;
+  margin-bottom: 55px;
+}
+.subRank nav > ul > li {
+  width: calc(100% / 6);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gray4);
+  border: 1px solid var(--gray3);
+  cursor: pointer;
+}
+.subRank nav > ul > li.on {
+  color: var(--wh);
+  background-color: var(--point1);
+  border-color: var(--point1);
+}
+
+.subRank .btns {
+  display: flex;
+  justify-content: flex-end;
+}
+.subRank .btns button {
+  padding: 1rem 2rem;
+  font-size: 0.9em;
+  position: relative;
+}
+.subRank .btns button:hover {
+  font-weight: 600;
+}
+.subRank .btns button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1.5px;
+  background-color: var(--point1);
+  display: none;
+}
+.subRank .btns button.on {
+  color: var(--point1);
+  font-weight: bold;
+}
+.subRank .btns button.on::before {
+  display: block;
+}
+.subRank .rankCon {
+  margin-top: 15px;
+}
+.subRank .topRank {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.subRank .topRank > li {
+  background-color: var(--gray1);
+  width: calc(100% / 3 - 1rem);
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.subRank .topRank li > .imgCon {
+  width: 80%;
+  padding-top: 380px;
+  margin-top: 15px;
+  border: 1px solid var(--gray2);
+  position: relative;
+}
+.subRank .topRank li > .imgCon img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.subRank .topRank > li > strong,
+.subRank .topRank > li > span {
+  padding: 0.5rem 2rem;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.subRank .topRank > li > strong {
+  padding-top: 3.5rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+.subRank .topRank > li > span:nth-of-type(1) {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 15px;
+  left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--point1);
+  color: var(--wh);
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 10;
+}
+.subRank .topRank > li > span:nth-of-type(2) {
+  font-size: 1.9rem;
+  color: var(--gray4);
+}
+.subRank .topRank > li > span:nth-of-type(3) {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--gray4);
+}
+
+.subRank .rank li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray3);
+  padding: 1.5rem 0;
+}
+.subRank .rank li > * {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 2rem;
+  font-size: 2rem;
+  color: var(--gray4);
+}
+.subRank .rank .imgCon {
+  width: 10%;
+  padding-top: 150px;
+  padding-left: 0;
+  border: 1px solid var(--gray2);
+  position: relative;
+}
+.subRank .rank .imgCon img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.subRank .rank li strong {
+  width: 53%;
+  color: var(--gray5);
+  cursor: pointer;
+}
+.subRank .rank li span:nth-of-type(1) {
+  width: 7%;
+  text-align: center;
+  font-weight: bold;
+  padding-left: 0;
+  color: var(--gray5);
+}
+.subRank .rank li span:nth-of-type(2) {
+  width: 15%;
+  font-size: 1.5rem;
+}
+.subRank .rank li span:nth-of-type(3) {
+  width: 15%;
+  font-size: 1.5rem;
+}

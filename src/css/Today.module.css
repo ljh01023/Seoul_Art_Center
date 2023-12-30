@@ -1,0 +1,71 @@
+.sec4 {
+  margin-top: -5rem;
+}
+.sec4 .reInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(1280px - 2rem);
+  height: 350px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 150px;
+}
+
+.sec4 .reInner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 350px;
+  background-color: #252525;
+  z-index: -1;
+}
+.sec4 .listCon {
+  margin-top: -150px;
+}
+
+.sec4 .listCon > li {
+  display: flex;
+  align-items: center;
+  color: var(--gray2);
+  cursor: pointer;
+  padding: 0 3.5rem;
+}
+.sec4 .listCon > li:hover {
+  background-color: var(--gray5);
+  border-radius: 1rem;
+  font-weight: bold;
+  color: var(--wh);
+}
+
+.sec4 .listCon strong {
+  width: 250px;
+  padding: 2rem 0;
+  font-size: 2rem;
+}
+.sec4 .listCon span {
+  padding: 2rem 0;
+  font-size: 0.9em;
+  color: var(--gray3);
+}
+
+.sec4 .imgCon {
+  border: 1px solid var(--gray2);
+  width: 400px;
+  padding-top: 500px;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-15%);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+.sec4 .imgCon > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+}
