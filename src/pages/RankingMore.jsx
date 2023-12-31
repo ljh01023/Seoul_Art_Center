@@ -70,40 +70,23 @@ export default function RankingMore() {
           <button>월간</button>
           <button>전체</button>
         </div>
-        {rankData.map((item, i) => (
-          <div className={cssStyle.rankCon} key={item.id}>
-            <ul className={cssStyle.topRank}>
-              <li>
-                <span>{i + 1}</span>
-                <div className={cssStyle.imgCon}>
-                  <img src={`/img/${item.image}`} alt={item.title} />
-                </div>
-                <strong>{item.title}</strong>
-                <span>{item.place}</span>
-                <span>
-                  {item.startDate === item.endDate
-                    ? item.startDate
-                    : `${item.startDate} ~ ${item.endDate}`}
-                </span>
-              </li>
-            </ul>
-            <ul className={cssStyle.rank}>
-              <li>
-                <span>순위4</span>
-                <div className={cssStyle.imgCon}>
-                  <img src={`/img/${item.image}`} alt={item.title} />
-                </div>
-                <strong>{item.title}</strong>
-                <span>{item.place}</span>
-                <span>
-                  {item.startDate === item.endDate
-                    ? item.startDate
-                    : `${item.startDate} ~ ${item.endDate}`}
-                </span>
-              </li>
-            </ul>
-          </div>
-        ))}
+        <ul className={cssStyle.rankCon}>
+          {rankData.map((item, i) => (
+            <li key={item.id}>
+              <span className={cssStyle.num}>{i + 1}</span>
+              <div className={cssStyle.imgCon}>
+                <img src={`/img/${item.image}`} alt={item.title} />
+              </div>
+              <strong>{item.title}</strong>
+              <span className={cssStyle.place}>{item.place}</span>
+              <span className={cssStyle.place}>
+                {item.startDate === item.endDate
+                  ? item.startDate
+                  : `${item.startDate} ~ ${item.endDate}`}
+              </span>
+            </li>
+          ))}
+        </ul>
       </section>
     </main>
   );
