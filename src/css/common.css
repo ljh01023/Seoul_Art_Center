@@ -237,6 +237,11 @@ button {
   }
 }
 
+/* scrollTopBtn */
+.scrollBtn {
+  z-index: 99999;
+}
+
 /* main */
 main .title {
   display: flex;
