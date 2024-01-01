@@ -5,8 +5,8 @@ import cssStyle from '../css/Ranking.module.css';
 
 export default function Ranking() {
   let totalData = useSelector((a) => a.datalist);
-  let [isActive, setIsActive] = useState(false);
   let [rankData, setRankData] = useState(totalData);
+  let [isActive, setIsActive] = useState(false); // li 클릭시 on클래스 추가
   let navigate = useNavigate();
 
   return (

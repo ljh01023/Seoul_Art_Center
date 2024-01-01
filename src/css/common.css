@@ -12,7 +12,7 @@
   --gray2: #efefef;
   --gray3: #bbbbbb;
   --gray4: #919090;
-  --gray5: #1c1c1c;
+  --gray5: #212121;
   --point1: #ee183a;
 }
 
@@ -240,6 +240,14 @@ button {
 /* scrollTopBtn */
 .scrollBtn {
   z-index: 99999;
+}
+
+/* CustomCalendar.jsx */
+.customCalendar {
+  position: absolute;
+  top: 150%;
+  left: -65%;
+  z-index: 99999 !important;
 }
 
 /* main */

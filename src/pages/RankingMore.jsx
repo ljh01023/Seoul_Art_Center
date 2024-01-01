@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import Calendar from '../components/Calendar';
 import cssStyle from '../css/RankingMore.module.css';
 
-export default function RankingMore() {
+export default function RankingMore({ onChange, value }) {
   let totalData = useSelector((a) => a.datalist);
   let [rankData, setRankData] = useState(totalData);
+
   return (
     <main className='mw'>
       <section className={cssStyle.subRank}>
@@ -63,13 +63,6 @@ export default function RankingMore() {
             </li>
           </ul>
         </nav>
-        <Calendar />
-        <div className={cssStyle.btns}>
-          <button>일간</button>
-          <button className={cssStyle.on}>주간</button>
-          <button>월간</button>
-          <button>전체</button>
-        </div>
         <ul className={cssStyle.rankCon}>
           {rankData.map((item, i) => (
             <li key={item.id}>

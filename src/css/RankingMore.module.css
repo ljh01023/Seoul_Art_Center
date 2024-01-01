@@ -12,9 +12,12 @@
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
-  color: var(--gray4);
+  color: var(--gray5);
   border: 1px solid var(--gray3);
   cursor: pointer;
+}
+.subRank nav > ul > li:hover {
+  background-color: var(--gray1);
 }
 .subRank nav > ul > li.on {
   color: var(--wh);
@@ -22,38 +25,8 @@
   border-color: var(--point1);
 }
 
-.subRank .btns {
-  display: flex;
-  justify-content: flex-end;
-}
-.subRank .btns button {
-  padding: 1rem 2rem;
-  font-size: 0.9em;
-  position: relative;
-}
-.subRank .btns button:hover {
-  font-weight: 600;
-}
-.subRank .btns button::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 1.5px;
-  background-color: var(--point1);
-  display: none;
-}
-.subRank .btns button.on {
-  color: var(--point1);
-  font-weight: bold;
-}
-.subRank .btns button.on::before {
-  display: block;
-}
 .subRank .rankCon {
-  margin-top: 15px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;

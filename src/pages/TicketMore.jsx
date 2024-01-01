@@ -12,6 +12,7 @@ export default function TicketMore() {
   let totalData = useSelector((a) => a.datalist);
   let [dataList, setDataList] = useState(totalData);
   let [openList, setOpenList] = useState([]);
+  let [count, setCount] = useState(0);
   useEffect(() => {
     let currentDate = new Date();
     currentDate = currentDate.toISOString().split('T')[0];
@@ -58,9 +59,16 @@ export default function TicketMore() {
           openList.map((item) => (
             <ul>
               <li>티켓오픈</li>
-              <li>{item.title}</li>
+              {/* 오류 - 클릭시 전체 list의 수가 증가됨. */}
+              <li
+                onClick={() => {
+                  setCount(count + 1);
+                }}
+              >
+                {item.title}
+              </li>
               <li>{item.openDate}</li>
-              <li>조회수</li>
+              <li>{count}</li>
             </ul>
           ))}
       </section>
