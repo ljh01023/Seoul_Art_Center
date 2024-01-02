@@ -1,0 +1,33 @@
+.subMap h2 {
+  margin-bottom: 100px;
+}
+.subMap .mapBox {
+  background-color: tomato;
+  width: 100%;
+  height: 350px;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+.subMap .mapBox + p {
+  background-color: var(--gray1);
+  padding: 2rem 0 2rem 4rem;
+  font-weight: 600;
+  color: var(--gray5);
+  border-bottom: 2px solid var(--gray5);
+}
+.subMap .mapBox + p > span {
+  font-weight: 800;
+  padding-right: 2rem;
+  color: var(--point1);
+  position: relative;
+}
+.subMap .mapBox + p > span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 1em;
+  background-color: var(--point1);
+}

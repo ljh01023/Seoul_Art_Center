@@ -6,7 +6,7 @@ import cssStyle from '../css/Ranking.module.css';
 export default function Ranking() {
   let totalData = useSelector((a) => a.datalist);
   let [rankData, setRankData] = useState(totalData);
-  let [isActive, setIsActive] = useState(false); // li 클릭시 on클래스 추가
+  let [activeButton, setActiveButton] = useState('# 전체'); // li 클릭시 on클래스 추가
   let navigate = useNavigate();
 
   return (
@@ -16,13 +16,12 @@ export default function Ranking() {
           <h2>장르별 랭킹</h2>
           <nav>
             <ul className={cssStyle.navList}>
-              {/* 오류: li클릭했을때 .on이 붙기 */}
               <li
-                className={`cssStyle.${isActive && 'on'}`}
                 onClick={() => {
                   setRankData(totalData);
-                  setIsActive(true);
+                  setActiveButton('# 전체');
                 }}
+                className={activeButton === '# 전체' ? cssStyle.on : ''}
               >
                 # 전체
               </li>
@@ -30,10 +29,17 @@ export default function Ranking() {
                 onClick={() => {
                   setRankData(
                     [...totalData]
-                      .filter((a) => a.category === '뮤지컬' || a.category === '오페라')
+                      .filter(
+                        (a) =>
+                          a.category === '뮤지컬' || a.category === '오페라'
+                      )
                       .sort((a, b) => b.count - a.count)
                   );
+                  setActiveButton('# 뮤지컬/오페라');
                 }}
+                className={
+                  activeButton === '# 뮤지컬/오페라' ? cssStyle.on : ''
+                }
               >
                 # 뮤지컬/오페라
               </li>
@@ -44,7 +50,9 @@ export default function Ranking() {
                       .filter((a) => a.category === '발레')
                       .sort((a, b) => b.count - a.count)
                   );
+                  setActiveButton('# 발레');
                 }}
+                className={activeButton === '# 발레' ? cssStyle.on : ''}
               >
                 # 발레
               </li>
@@ -52,10 +60,14 @@ export default function Ranking() {
                 onClick={() => {
                   setRankData(
                     [...totalData]
-                      .filter((a) => a.category === '성악' || a.category === '연주회')
+                      .filter(
+                        (a) => a.category === '성악' || a.category === '연주회'
+                      )
                       .sort((a, b) => b.count - a.count)
                   );
+                  setActiveButton('# 성악/연주회');
                 }}
+                className={activeButton === '# 성악/연주회' ? cssStyle.on : ''}
               >
                 # 성악/연주회
               </li>
@@ -63,10 +75,14 @@ export default function Ranking() {
                 onClick={() => {
                   setRankData(
                     [...totalData]
-                      .filter((a) => a.category === '전시' || a.category === '서예')
+                      .filter(
+                        (a) => a.category === '전시' || a.category === '서예'
+                      )
                       .sort((a, b) => b.count - a.count)
                   );
+                  setActiveButton('# 전시/서예');
                 }}
+                className={activeButton === '# 전시/서예' ? cssStyle.on : ''}
               >
                 # 전시/서예
               </li>
@@ -77,7 +93,9 @@ export default function Ranking() {
                       .filter((a) => a.category === '연극')
                       .sort((a, b) => b.count - a.count)
                   );
+                  setActiveButton('# 연극');
                 }}
+                className={activeButton === '# 연극' ? cssStyle.on : ''}
               >
                 # 연극
               </li>

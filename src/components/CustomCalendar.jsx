@@ -16,7 +16,7 @@ export default function CustomCalendar() {
         onChange={setNowDate}
         value={nowDate}
         onClickDay={handleDayClick}
-        calendarType='US' // 일요일부터 시작하는 달력
+        calendarType='gregory'
         formatDay={(locale, date) => moment(date).format('DD')} // '일' 단어 삭제
       />
     </div>
