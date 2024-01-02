@@ -8,6 +8,7 @@ let anniverList = [
     endDate: '2023-08-20',
     place: '오페라극장',
     image: 'image3.jpg',
+    count: '115',
   },
   {
     id: '50',
@@ -17,6 +18,7 @@ let anniverList = [
     endDate: '2023-12-31',
     place: '콘서트홀',
     image: 'image48.jpg',
+    count: '150',
   },
   {
     id: '54',
@@ -26,6 +28,7 @@ let anniverList = [
     endDate: '2023-12-28',
     place: '인춘아트홀',
     image: 'image55.jpg',
+    count: '140',
   },
   {
     id: '48',
@@ -35,6 +38,7 @@ let anniverList = [
     endDate: '2023-12-27',
     place: 'IBK챔버홀',
     image: 'image50.jpg',
+    count: '58',
   },
   {
     id: '55',
@@ -44,6 +48,7 @@ let anniverList = [
     endDate: '2023-12-20',
     place: '인춘아트홀',
     image: 'image55.jpg',
+    count: '115',
   },
   {
     id: '61',
@@ -53,6 +58,7 @@ let anniverList = [
     endDate: '2023-12-15',
     place: '콘서트홀',
     image: 'image58.jpg',
+    count: '161',
   },
   {
     id: '49',
@@ -62,6 +68,7 @@ let anniverList = [
     endDate: '2023-12-25',
     place: '오페라극장',
     image: 'image51.jpg',
+    count: '209',
   },
   {
     id: '53',
@@ -71,6 +78,7 @@ let anniverList = [
     endDate: '2023-12-07',
     place: 'IBK챔버홀',
     image: 'image54.jpg',
+    count: '160',
   },
   {
     id: '56',
@@ -80,6 +88,7 @@ let anniverList = [
     endDate: '2023-11-28',
     place: '인춘아트홀',
     image: 'image55.jpg',
+    count: '126',
   },
   {
     id: '57',
@@ -89,6 +98,7 @@ let anniverList = [
     endDate: '2023-11-22',
     place: '인춘아트홀',
     image: 'image55.jpg',
+    count: '137',
   },
   {
     id: '59',
@@ -98,6 +108,7 @@ let anniverList = [
     endDate: '2023-11-02',
     place: '리사이틀홀',
     image: 'image56.jpg',
+    count: '109',
   },
   {
     id: '70',
@@ -107,6 +118,7 @@ let anniverList = [
     endDate: '2023-10-29',
     place: '오페라극장',
     image: 'image67.jpg',
+    count: '93',
   },
   {
     id: '69',
@@ -116,6 +128,7 @@ let anniverList = [
     endDate: '2023-08-31',
     place: '자유소극장',
     image: 'image66.jpg',
+    count: '104',
   },
   {
     id: '58',
@@ -125,6 +138,7 @@ let anniverList = [
     endDate: '2023-07-07',
     place: '인춘아트홀',
     image: 'image55.jpg',
+    count: '158',
   },
   {
     id: '68',
@@ -134,6 +148,7 @@ let anniverList = [
     endDate: '2023-10-08',
     place: '한가람미술관 제1전시실',
     image: 'image65.jpg',
+    count: '152',
   },
   {
     id: '67',
@@ -143,6 +158,7 @@ let anniverList = [
     endDate: '2023-06-04',
     place: 'CJ 토월극장',
     image: 'image64.jpg',
+    count: '147',
   },
   {
     id: '66',
@@ -152,6 +168,7 @@ let anniverList = [
     endDate: '2023-09-10',
     place: '한가람미술관 제1전시실',
     image: 'image63.jpg',
+    count: '136',
   },
   {
     id: '65',
@@ -161,6 +178,7 @@ let anniverList = [
     endDate: '2023-05-21',
     place: '자유소극장',
     image: 'image62.jpg',
+    count: '165',
   },
   {
     id: '64',
@@ -170,6 +188,7 @@ let anniverList = [
     endDate: '2023-03-29',
     place: 'IBK챔버홀',
     image: 'image61.jpg',
+    count: '164',
   },
   {
     id: '63',
@@ -179,6 +198,7 @@ let anniverList = [
     endDate: '2023-02-24',
     place: '콘서트홀',
     image: 'image60.jpg',
+    count: '163',
   },
   {
     id: '62',
@@ -188,6 +208,7 @@ let anniverList = [
     endDate: '2023-02-22',
     place: '콘서트홀',
     image: 'image59.jpg',
+    count: '116',
   },
   {
     id: '60',
@@ -197,6 +218,7 @@ let anniverList = [
     endDate: '2023-02-14',
     place: '콘서트홀',
     image: 'image57.jpg',
+    count: '160',
   },
 ];
 let anniverData = createSlice({

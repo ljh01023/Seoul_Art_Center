@@ -11,7 +11,7 @@ export default function CustomCalendar() {
   };
 
   return (
-    <div className='customCalendar'>
+    <div className='totalCalendar'>
       <Calendar
         onChange={setNowDate}
         value={nowDate}

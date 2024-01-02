@@ -1,27 +1,26 @@
 .subMap h2 {
   margin-bottom: 100px;
 }
-.subMap .mapBox {
-  background-color: tomato;
+.subMap .map {
   width: 100%;
   height: 350px;
   border-radius: 1rem 1rem 0 0;
   overflow: hidden;
 }
-.subMap .mapBox + p {
+.subMap .map + p {
   background-color: var(--gray1);
   padding: 2rem 0 2rem 4rem;
   font-weight: 600;
   color: var(--gray5);
   border-bottom: 2px solid var(--gray5);
 }
-.subMap .mapBox + p > span {
+.subMap .map + p > span {
   font-weight: 800;
   padding-right: 2rem;
   color: var(--point1);
   position: relative;
 }
-.subMap .mapBox + p > span::before {
+.subMap .map + p > span::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -30,4 +29,100 @@
   width: 3px;
   height: 1em;
   background-color: var(--point1);
+}
+.subMap .subway,
+.subMap .bus {
+  display: flex;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--gray3);
+}
+.subMap .subway {
+  margin-top: 50px;
+}
+.subMap .subway > div,
+.subMap .bus > div {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.subMap .subway > div::before,
+.subMap .bus > div::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: var(--gray1);
+  z-index: -1;
+}
+.subMap .subway > div > svg {
+  width: 50px;
+  height: auto;
+}
+.subMap .bus > div > svg {
+  width: 60px;
+  height: auto;
+}
+
+.subMap .subway .title,
+.subMap .bus .title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.subMap .subway li,
+.subMap .bus li {
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 1rem 0;
+}
+.subMap .subway li:first-of-type,
+.subMap .bus li:first-of-type {
+  padding-top: 4rem;
+}
+.subMap .subway span,
+.subMap .bus span {
+  position: relative;
+  padding: 0 4rem 0 2rem;
+}
+.subMap .subway span::before,
+.subMap .bus span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: -1;
+}
+.subMap .subway span::before {
+  width: 80px;
+}
+.subMap .subway li:nth-of-type(1) > span::before {
+  border: 1.5px solid rgb(46, 246, 46);
+}
+.subMap .subway li:nth-of-type(2) > span::before {
+  border: 1.5px solid rgb(244, 171, 46);
+}
+.subMap .bus li:nth-of-type(1) > span::before {
+  border: 1.5px solid rgb(46, 93, 246);
+}
+.subMap .bus li:nth-of-type(2) > span::before {
+  border: 1.5px solid rgb(46, 246, 46);
+}
+.subMap .bus li:nth-of-type(3) > span::before {
+  border: 1.5px solid rgb(246, 24, 24);
+}
+.subMap .bus li:nth-of-type(4) > span::before {
+  border: 1.5px solid rgb(46, 246, 46);
 }

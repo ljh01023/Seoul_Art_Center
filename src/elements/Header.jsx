@@ -41,12 +41,40 @@ export default function Header() {
             <Link to='/'>공연전시</Link>
             <ul className='sub'>
               <li>
-                <Link to='/'>전체일정</Link>
-                <Link to='/'>오늘의 공연/전시</Link>
+                <Link
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/schedule');
+                  }}
+                >
+                  전체일정
+                </Link>
+                <Link
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/today_show');
+                  }}
+                >
+                  오늘의 공연/전시
+                </Link>
                 <Link to='/'>진행/예정 프로그램</Link>
-                <Link to='/'>SAC 기획 프로그램</Link>
+                <Link
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/30th_program');
+                  }}
+                >
+                  SAC 기획 프로그램
+                </Link>
                 <Link to='/'>패키지</Link>
-                <Link to='/'>티켓오픈 공지</Link>
+                <Link
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/ticket_open');
+                  }}
+                >
+                  티켓오픈 공지
+                </Link>
                 <Link to='/'>SAC 딜</Link>
                 <Link to='/'>당일 할인 티켓</Link>
                 <Link to='/'>예매/취소 안내</Link>
