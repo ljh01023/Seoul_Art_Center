@@ -25,16 +25,7 @@ const iconBus = (
     <path d='M288 0C422.4 0 512 35.2 512 80V96l0 32c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32l0 160c0 17.7-14.3 32-32 32v32c0 17.7-14.3 32-32 32H416c-17.7 0-32-14.3-32-32V448H192v32c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32l0-32c-17.7 0-32-14.3-32-32l0-160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h0V96h0V80C64 35.2 153.6 0 288 0zM128 160v96c0 17.7 14.3 32 32 32H272V128H160c-17.7 0-32 14.3-32 32zM304 288H416c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32H304V288zM144 400a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm288 0a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM384 80c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16s7.2 16 16 16H368c8.8 0 16-7.2 16-16z' />
   </svg>
 );
-// const iconMarker = (
-//   <svg
-//     xmlns='http://www.w3.org/2000/svg'
-//     height='16'
-//     width='12'
-//     viewBox='0 0 384 512'
-//   >
-//     <path d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z' />
-//   </svg>
-// );
+
 export default function Map() {
   const mapRef = useRef(null);
 
@@ -42,16 +33,16 @@ export default function Map() {
     if (window.kakao && mapRef.current) {
       const options = {
         center: new window.kakao.maps.LatLng(37.4787, 127.0113),
-        level: 3,
+        level: 2, //확대했을때
       };
 
       const map = new window.kakao.maps.Map(mapRef.current, options); // 지도 생성
 
       // 마커가 표시될 위치
-      const markerPosition = new kakao.maps.LatLng(37.4787, 127.0113);
+      const markerPosition = new window.kakao.maps.LatLng(37.4787, 127.0113);
 
       // 마커 생성
-      var marker = new window.kakao.maps.Marker({
+      const marker = new window.kakao.maps.Marker({
         position: markerPosition,
       });
 
@@ -65,7 +56,7 @@ export default function Map() {
       <section className={cssStyle.subMap}>
         <h2>오시는 길·주차안내</h2>
         <Tabs
-          defaultActiveKey='profile'
+          defaultActiveKey='home'
           id='fill-tab-example'
           className='mb-3'
           fill
