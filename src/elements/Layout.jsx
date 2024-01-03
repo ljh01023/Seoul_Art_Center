@@ -28,7 +28,7 @@ export default function Layout() {
       <Header />
       <Outlet></Outlet>
       <Footer />
-      <ScrollTop />
+      {showScrollTop && <ScrollTop />}
     </div>
   );
 }

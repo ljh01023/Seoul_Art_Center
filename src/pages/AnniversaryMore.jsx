@@ -48,7 +48,7 @@ export default function AnniversaryMore() {
         </div>
 
         <ul>
-          {aniData.map((item) => (
+          {list.map((item) => (
             <li key={item.id}>
               <div className={cssStyle.imgCon}>
                 <img src={`/img/${item.image}`} alt={item.title} />
