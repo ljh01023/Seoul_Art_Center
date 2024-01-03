@@ -16,6 +16,7 @@ export default function ThisWeek() {
       let day = new Date(currentDate.setDate(weekStart + i));
       week.push(day.toISOString().split('T')[0]);
     }
+
     setWeek(week);
   }, []);
   const matchingData = totalData.filter((item) => week.includes(item.startDate));

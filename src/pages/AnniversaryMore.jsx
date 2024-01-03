@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import CustomCalendar from '../components/CustomCalendar';
 import cssStyle from '../css/AnniversaryMore.module.css';
 
 export default function AnniversaryMore() {

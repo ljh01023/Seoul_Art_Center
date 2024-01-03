@@ -1,27 +1,17 @@
-import { useState } from 'react';
-import Calendar from 'react-calendar';
-import moment from 'moment';
-import 'react-calendar/dist/Calendar.css';
-import '../css/scheduleCalendar.css';
+import CustomCalendar from '../components/CustomCalendar';
+import { useSelector } from 'react-redux';
 
 export default function Schedule() {
-  const [nowDate, setNowDate] = useState(new Date());
-  const handleDayClick = (nowDate) => {
-    setNowDate(nowDate);
-  };
+  let totalData = useSelector((a) => a.datalist);
+  //totalData 중에서 startDate 정보만 배열로 저장
+  let startDate = totalData.map((a) => a.startDate);
 
   return (
     <main className='mw'>
       <section className='subSchedule'>
         <h2>공연/전시 전체일정</h2>
         <div className='calCon'>
-          <Calendar
-            onChange={setNowDate}
-            value={nowDate}
-            onClickDay={handleDayClick}
-            calendarType='gregory'
-            formatDay={(locale, date) => moment(date).format('DD')}
-          />
+          <CustomCalendar startDate={startDate} totalData={totalData} />
         </div>
       </section>
     </main>

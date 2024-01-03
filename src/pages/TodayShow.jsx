@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import CustomCalendar from '../components/CustomCalendar';
 import cssStyle from '../css/TodayShow.module.css';
 
 const calIcon = (
@@ -18,29 +17,22 @@ const moreIcon = (
 
 export default function TodayShow() {
   let totalData = useSelector((a) => a.datalist);
-  // const [today, setToday] = useState([]);
+  const [today, setToday] = useState([]);
 
-  // 오늘날짜
-  let currentDate = new Date();
-  currentDate = currentDate.toISOString().split('T')[0];
-
-  // 버튼 클릭시 달력 컴포넌트 토글
-  let [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    let currentDate = new Date();
+    let today = [];
+    today.push((currentDate = currentDate.toISOString().split('T')[0]));
+    setToday(today);
+  }, []);
+  const matchingData = totalData.filter((item) => today.includes(item.startDate));
 
   return (
     <main className='mw'>
       <section className={cssStyle.subTodayShow}>
         <h2>오늘의 공연 / 전시</h2>
-        <div className={cssStyle.dateCon}>
-          <button className={cssStyle.calendar} onClick={() => setIsOpen(!isOpen)}>
-            <span>{calIcon}</span>
-            {currentDate}
-            <span>{moreIcon}</span>
-          </button>
-          {isOpen && <CustomCalendar />}
-        </div>
         <ul>
-          {totalData.map((item) => (
+          {matchingData.map((item) => (
             <li key={item.id}>
               <div className={cssStyle.imgCon}>
                 <img src={`/img/${item.image}`} alt={item.title} />

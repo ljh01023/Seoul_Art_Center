@@ -241,24 +241,6 @@ button {
   z-index: 99999;
 }
 
-/* CustomCalendar.jsx */
-.customCalendar {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 99999 !important;
-}
-
-/* TotalCalendar.jsx */
-.totalCalendar {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  /* z-index: 99999 !important; */
-}
-
 /* main_sub_map */
 .nav-tabs .nav-link {
   border: 1px solid var(--gray3);
