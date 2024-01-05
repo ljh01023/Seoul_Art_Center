@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import cssStyle from '../css/TicketOpen.module.css';
 
 export default function TicketOpen() {
@@ -36,11 +36,7 @@ export default function TicketOpen() {
         <Swiper
           slidesPerView={4}
           spaceBetween={30}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          modules={[Autoplay]}
+          modules={[Navigation]}
           className={cssStyle.mySwiper}
         >
           {openList &&

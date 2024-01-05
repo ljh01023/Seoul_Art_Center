@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import cssStyle from '../css/TodayShow.module.css';
+import cssStyle from '../css/TodayShowMore.module.css';
 
 const calIcon = (
   <svg xmlns='http://www.w3.org/2000/svg' height='16' width='14' viewBox='0 0 448 512'>
@@ -15,7 +15,7 @@ const moreIcon = (
   </svg>
 );
 
-export default function TodayShow() {
+export default function TodayShowMore() {
   let totalData = useSelector((a) => a.datalist);
   const [today, setToday] = useState([]);
 

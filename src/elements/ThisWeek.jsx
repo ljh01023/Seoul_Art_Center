@@ -26,8 +26,8 @@ export default function ThisWeek() {
       <section className={cssStyle.sec5}>
         <h2>이주의 공연·전시</h2>
         <Swiper
-          slidesPerView={5}
-          spaceBetween={20}
+          slidesPerView={4}
+          spaceBetween={30}
           navigation={true}
           modules={[Navigation]}
           className={cssStyle.mySwiper}

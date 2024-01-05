@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import cssStyle from '../css/TodayRecom.module.css';
+import cssStyle from '../css/Recommend.module.css';
 
-export default function TodayRecom() {
+export default function Recommend() {
   let [img, setImg] = useState('image23.jpg');
   let reData = useSelector((a) => a.recomData);
 
