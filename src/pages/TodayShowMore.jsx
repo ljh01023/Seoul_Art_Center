@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import CardCon from '../components/CardCon';
 import cssStyle from '../css/TodayShowMore.module.css';
 
 const calIcon = (
@@ -33,18 +34,7 @@ export default function TodayShowMore() {
         <h2>오늘의 공연 / 전시</h2>
         <ul>
           {matchingData.map((item) => (
-            <li key={item.id}>
-              <div className={cssStyle.imgCon}>
-                <img src={`/img/${item.image}`} alt={item.title} />
-              </div>
-              <strong>{item.title}</strong>
-              <span>{item.place}</span>
-              <span>
-                {item.startDate === item.endDate
-                  ? item.startDate
-                  : `${item.startDate} ~ ${item.endDate}`}
-              </span>
-            </li>
+            <CardCon item={item} />
           ))}
         </ul>
       </section>

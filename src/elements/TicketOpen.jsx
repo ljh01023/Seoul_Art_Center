@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import CardCon from '../components/CardCon';
 import cssStyle from '../css/TicketOpen.module.css';
 
 export default function TicketOpen() {
@@ -42,14 +43,7 @@ export default function TicketOpen() {
           {openList &&
             openList.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className={cssStyle.slideCon}>
-                  <div className={cssStyle.imgCon}>
-                    <img src={`/img/${item.image}`} alt={item.title} />
-                    <span>{item.category}</span>
-                  </div>
-                  <strong>{item.title}</strong>
-                  <span>{`${item.openDate} open`}</span>
-                </div>
+                <CardCon item={item} />
               </SwiperSlide>
             ))}
         </Swiper>

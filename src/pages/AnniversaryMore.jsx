@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import CardCon from '../components/CardCon';
 import { useSelector } from 'react-redux';
 import cssStyle from '../css/AnniversaryMore.module.css';
 
@@ -47,19 +48,8 @@ export default function AnniversaryMore() {
         </div>
 
         <ul>
-          {list.map((item) => (
-            <li key={item.id}>
-              <div className={cssStyle.imgCon}>
-                <img src={`/img/${item.image}`} alt={item.title} />
-              </div>
-              <strong>{item.title}</strong>
-              <span>{item.place}</span>
-              <span>
-                {item.startDate === item.endDate
-                  ? item.startDate
-                  : `${item.startDate} ~ ${item.endDate}`}
-              </span>
-            </li>
+          {aniData.map((item) => (
+            <CardCon item={item} />
           ))}
         </ul>
       </section>

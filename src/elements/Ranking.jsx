@@ -29,17 +29,12 @@ export default function Ranking() {
                 onClick={() => {
                   setRankData(
                     [...totalData]
-                      .filter(
-                        (a) =>
-                          a.category === '뮤지컬' || a.category === '오페라'
-                      )
+                      .filter((a) => a.category === '뮤지컬' || a.category === '오페라')
                       .sort((a, b) => b.count - a.count)
                   );
                   setActiveButton('# 뮤지컬/오페라');
                 }}
-                className={
-                  activeButton === '# 뮤지컬/오페라' ? cssStyle.on : ''
-                }
+                className={activeButton === '# 뮤지컬/오페라' ? cssStyle.on : ''}
               >
                 # 뮤지컬/오페라
               </li>
@@ -60,9 +55,7 @@ export default function Ranking() {
                 onClick={() => {
                   setRankData(
                     [...totalData]
-                      .filter(
-                        (a) => a.category === '성악' || a.category === '연주회'
-                      )
+                      .filter((a) => a.category === '성악' || a.category === '연주회')
                       .sort((a, b) => b.count - a.count)
                   );
                   setActiveButton('# 성악/연주회');
@@ -75,9 +68,7 @@ export default function Ranking() {
                 onClick={() => {
                   setRankData(
                     [...totalData]
-                      .filter(
-                        (a) => a.category === '전시' || a.category === '서예'
-                      )
+                      .filter((a) => a.category === '전시' || a.category === '서예')
                       .sort((a, b) => b.count - a.count)
                   );
                   setActiveButton('# 전시/서예');

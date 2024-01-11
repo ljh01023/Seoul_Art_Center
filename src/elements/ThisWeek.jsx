@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import CardCon from '../components/CardCon';
 import { useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -34,17 +35,7 @@ export default function ThisWeek() {
         >
           {matchingData.map((item) => (
             <SwiperSlide className={cssStyle.swiper} key={item.id}>
-              <div className={cssStyle.slideCon}>
-                <div className={cssStyle.imgCon}>
-                  <img src={`./img/${item.image}`} alt={item.title} />
-                </div>
-                <strong>{item.title}</strong>
-                <span>
-                  {item.startDate === item.endDate
-                    ? item.startDate
-                    : `${item.startDate} ~ ${item.endDate}`}
-                </span>
-              </div>
+              <CardCon item={item} />
             </SwiperSlide>
           ))}
         </Swiper>

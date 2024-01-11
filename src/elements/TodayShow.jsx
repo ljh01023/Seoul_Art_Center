@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
+import CardCon from '../components/CardCon';
 import cssStyle from '../css/TodayShow.module.css';
 
 export default function TodayShow() {
@@ -45,17 +46,7 @@ export default function TodayShow() {
         >
           {matchingData.map((item) => (
             <SwiperSlide className={cssStyle.swiper} key={item.id}>
-              <div className={cssStyle.slideCon}>
-                <div className={cssStyle.imgCon}>
-                  <img src={`./img/${item.image}`} alt={item.title} />
-                </div>
-                <strong>{item.title}</strong>
-                <span>
-                  {item.startDate === item.endDate
-                    ? item.startDate
-                    : `${item.startDate} ~ ${item.endDate}`}
-                </span>
-              </div>
+              <CardCon item={item} />
             </SwiperSlide>
           ))}
         </Swiper>
