@@ -272,18 +272,18 @@ main h2 {
   font-weight: bold;
 }
 
-main .more {
+/* main .more {
   padding: 0.5rem 2rem;
   color: var(--gray4);
   border: 1px solid var(--gray3);
   border-radius: 50px;
   margin-bottom: 30px;
-}
-.title button:hover {
+} */
+/* .title button:hover {
   background-color: var(--gray3);
   color: var(--wh);
   font-weight: bold;
-}
+} */
 
 /* 배너 */
 .swiper-pagination {
@@ -295,8 +295,8 @@ main .more {
 .swiper-pagination-progressbar-fill {
   background-color: var(--point1) !important;
 }
-
-/* CardCon */
+/* ============================================== */
+/* components _ CardCon */
 .cardCon {
   width: 100%;
   cursor: pointer;
@@ -306,6 +306,7 @@ main .more {
   position: relative;
   width: 100%;
   padding-top: 380px;
+  overflow: hidden;
 }
 .cardCon .imgCon > img {
   position: absolute;
@@ -329,6 +330,20 @@ main .more {
   color: var(--gray4);
   padding: 1rem;
   text-align: center;
+}
+/* ============================================== */
+/* components _ BtnTotal */
+.btnTotal {
+  padding: 0.5rem 2rem;
+  color: var(--gray4);
+  border: 1px solid var(--gray3);
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+.btnTotal:hover {
+  background-color: var(--gray3);
+  color: var(--wh);
+  font-weight: bold;
 }
 
 /* footer start */

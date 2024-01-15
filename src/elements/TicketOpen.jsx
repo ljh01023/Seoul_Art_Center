@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import CardCon from '../components/CardCon';
-import cssStyle from '../css/TicketOpen.module.css';
+import BtnTotal from '../components/BtnTotal';
 
 export default function TicketOpen() {
-  let navigate = useNavigate();
   let totalData = useSelector((a) => a.datalist);
   let [openList, setOpenList] = useState([]);
 
@@ -15,31 +14,23 @@ export default function TicketOpen() {
   useEffect(() => {
     let currentDate = new Date();
     currentDate = currentDate.toISOString().split('T')[0];
-    // console.log(currentDate);
 
     // 오늘날짜, 오픈날짜 매칭
     let matchingData = totalData.filter((a) => a.openDate >= currentDate);
     setOpenList(matchingData);
-    // console.log(totalData);
-    // console.log('매칭', matchingData);
   }, []);
 
   return (
     <main className='mw'>
-      <section className={cssStyle.sec2}>
+      <section className='sec2'>
         <div className='title'>
           <h2>티켓 오픈</h2>
-          <button className='more' onClick={() => navigate('/ticket_open')}>
-            전체보기
-          </button>
+          <Link to='/ticket_open'>
+            <BtnTotal />
+          </Link>
         </div>
 
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          modules={[Navigation]}
-          className={cssStyle.mySwiper}
-        >
+        <Swiper slidesPerView={4} spaceBetween={30} modules={[Navigation]} className='mySwiper'>
           {openList &&
             openList.map((item) => (
               <SwiperSlide key={item.id}>

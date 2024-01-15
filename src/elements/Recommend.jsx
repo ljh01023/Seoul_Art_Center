@@ -4,18 +4,21 @@ import cssStyle from '../css/Recommend.module.css';
 
 export default function Recommend() {
   let [img, setImg] = useState('image23.jpg');
+  let [hover, setHover] = useState('li:first-of-type');
   let reData = useSelector((a) => a.recomData);
 
   return (
     <main>
       <section className={cssStyle.sec4}>
-        <h2>오늘의 추천</h2>
+        <h2>추천 공연・전시</h2>
         <div className={cssStyle.reInner}>
           <ul className={cssStyle.listCon}>
             {reData.map((item) => (
               <li
+                // className={hover === 'on' ? cssStyle.on : ''}
                 onMouseOver={() => {
                   setImg(item.image);
+                  setHover(cssStyle.on);
                 }}
                 key={item.id}
               >

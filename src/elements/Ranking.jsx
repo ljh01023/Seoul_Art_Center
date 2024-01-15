@@ -1,13 +1,13 @@
+import BtnTotal from '../components/BtnTotal';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import cssStyle from '../css/Ranking.module.css';
 
 export default function Ranking() {
   let totalData = useSelector((a) => a.datalist);
   let [rankData, setRankData] = useState(totalData);
-  let [activeButton, setActiveButton] = useState('# 전체'); // li 클릭시 on클래스 추가
-  let navigate = useNavigate();
+  let [activeButton, setActiveButton] = useState('# 전체'); // 클래스 on/off
 
   return (
     <main className='mw'>
@@ -91,10 +91,10 @@ export default function Ranking() {
                 # 연극
               </li>
             </ul>
-            <button className='more' onClick={() => navigate('/ranking')}>
-              전체보기
-            </button>
           </nav>
+          <Link to='/ranking'>
+            <BtnTotal />
+          </Link>
         </div>
         <ul className={cssStyle.listCon}>
           {rankData.slice(0, 8).map((item, i) => (

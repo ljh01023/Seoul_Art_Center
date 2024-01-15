@@ -5,7 +5,7 @@ import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export default function Layout() {
-  // 스크롤 goTop 버튼
+  // 스크롤 Top 버튼
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
     const handleScrollTop = () => {

@@ -22,17 +22,7 @@ export default function TodayShow() {
   return (
     <main className='mw'>
       <section className={cssStyle.sec9}>
-        <div className='title'>
-          <h2>오늘의 공연·전시</h2>
-          <button
-            className='more'
-            onClick={() => {
-              navigate('/today_show');
-            }}
-          >
-            전체보기
-          </button>
-        </div>
+        <h2>오늘의 공연·전시</h2>
         <Swiper
           slidesPerView={4}
           spaceBetween={30}

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import CardCon from '../components/CardCon';
 import { useSelector } from 'react-redux';
-import cssStyle from '../css/AnniversaryMore.module.css';
+import cssStyle from '../css/SpecialMore.module.css';
 
-export default function AnniversaryMore() {
+export default function SpecialMore() {
   let aniData = useSelector((a) => a.anniverData);
   const [activeButton, setActiveButton] = useState('이름순'); //class on/off
   let [list, setList] = useState([]); // 정렬

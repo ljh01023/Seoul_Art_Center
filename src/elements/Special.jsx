@@ -1,8 +1,10 @@
+import BtnTotal from '../components/BtnTotal';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import cssStyle from '../css/Anniversary.module.css';
+import cssStyle from '../css/Special.module.css';
 
-export default function Anniversary() {
+export default function Special() {
   let aniData = useSelector((a) => a.anniverData);
   let navigate = useNavigate();
   return (
@@ -14,9 +16,9 @@ export default function Anniversary() {
             <br />
             기획 프로그램
           </h2>
-          <button className='more' onClick={() => navigate('30th_program')}>
-            전체보기
-          </button>
+          <Link to='/sac_program'>
+            <BtnTotal />
+          </Link>
         </div>
         <ul className={cssStyle.imgListCon}>
           {aniData.slice(0, 7).map((item) => (
