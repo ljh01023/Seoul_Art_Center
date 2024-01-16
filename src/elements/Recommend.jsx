@@ -4,7 +4,6 @@ import cssStyle from '../css/Recommend.module.css';
 
 export default function Recommend() {
   let [img, setImg] = useState('image23.jpg');
-  let [hover, setHover] = useState('li:first-of-type');
   let reData = useSelector((a) => a.recomData);
 
   return (
@@ -15,10 +14,8 @@ export default function Recommend() {
           <ul className={cssStyle.listCon}>
             {reData.map((item) => (
               <li
-                // className={hover === 'on' ? cssStyle.on : ''}
-                onMouseOver={() => {
+                onMouseOver={(e) => {
                   setImg(item.image);
-                  setHover(cssStyle.on);
                 }}
                 key={item.id}
               >

@@ -91,16 +91,17 @@ export default function TicketOpenMore() {
           <p>조회수</p>
         </div>
 
-        {/* 오류 - ul전체가 반복됨 > 구조변경 */}
-        {openList &&
-          openList.map((item) => (
-            <ul key={item.id}>
-              <li>티켓오픈</li>
-              <li>{item.title}</li>
-              <li>{item.openDate}</li>
-              <li>{item.count}</li>
-            </ul>
-          ))}
+        <ul>
+          {openList &&
+            openList.map((item) => (
+              <li key={item.id}>
+                <span>티켓오픈</span>
+                <span>{item.title}</span>
+                <span>{item.openDate}</span>
+                <span>{item.count}</span>
+              </li>
+            ))}
+        </ul>
       </section>
     </main>
   );
