@@ -1,4 +1,3 @@
-// import cssStyle from '../css/CardCon.Module.css';
 export default function CardCon({ item, i }) {
   return (
     <div className='cardCon'>

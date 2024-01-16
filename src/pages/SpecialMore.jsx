@@ -1,16 +1,16 @@
-import { useState } from 'react';
 import CardCon from '../components/CardCon';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import cssStyle from '../css/SpecialMore.module.css';
 
 export default function SpecialMore() {
   let aniData = useSelector((a) => a.anniverData);
   const [activeButton, setActiveButton] = useState('이름순'); //class on/off
-  let [list, setList] = useState([]); // 정렬
+  let [list, setList] = useState(aniData); // 정렬
 
   return (
     <main className='mw'>
-      <section className={cssStyle.subAni}>
+      <section className={`subSpeMore ${cssStyle.subAni}`}>
         <h2>2023 예술의전당 기획 프로그램</h2>
 
         <div className={cssStyle.btns}>
@@ -48,7 +48,7 @@ export default function SpecialMore() {
         </div>
 
         <ul>
-          {aniData.map((item) => (
+          {list.map((item) => (
             <CardCon item={item} />
           ))}
         </ul>

@@ -19,12 +19,6 @@
   font-weight: bold;
 }
 
-.sec3 nav > button {
-  position: absolute;
-  top: -10px;
-  right: 0;
-}
-
 .sec3 .listCon {
   display: grid;
   grid-template-rows: repeat(2, 1fr);

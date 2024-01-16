@@ -1,14 +1,11 @@
+import CardCon from '../components/CardCon';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
-import CardCon from '../components/CardCon';
-import cssStyle from '../css/TodayShow.module.css';
 
 export default function TodayShow() {
   let totalData = useSelector((a) => a.datalist);
-  let navigate = useNavigate();
   const [today, setToday] = useState([]);
 
   useEffect(() => {
@@ -21,25 +18,38 @@ export default function TodayShow() {
 
   return (
     <main className='mw'>
-      <section className={cssStyle.sec9}>
+      <section className='sec5'>
         <h2>오늘의 공연·전시</h2>
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          navigation={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          modules={[Navigation, Autoplay]}
-          className={cssStyle.mySwiper}
-        >
-          {matchingData.map((item) => (
-            <SwiperSlide className={cssStyle.swiper} key={item.id}>
-              <CardCon item={item} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {matchingData && matchingData.length > 0 ? (
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            navigation={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            modules={[Navigation, Autoplay]}
+            className='mySwiper'
+          >
+            {matchingData.map((item) => (
+              <SwiperSlide className='swiper' key={item.id}>
+                <CardCon item={item} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <p
+            style={{
+              fontSize: '2.5rem',
+              fontWeight: '300',
+              textAlign: 'center',
+              color: 'var(--gray4)',
+            }}
+          >
+            오늘의 공연 및 전시 없습니다.
+          </p>
+        )}
       </section>
     </main>
   );

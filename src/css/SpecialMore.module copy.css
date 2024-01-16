@@ -1,0 +1,87 @@
+.subAni h2 {
+  margin-bottom: 100px;
+}
+.subAni .dateCon {
+  position: relative;
+}
+
+.subAni .btns {
+  display: flex;
+  justify-content: flex-end;
+}
+.subAni .btns button {
+  padding: 1rem 2rem;
+  font-size: 0.9em;
+  position: relative;
+}
+.subAni .btns button:hover {
+  font-weight: 600;
+}
+.subAni .btns button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1.5px;
+  background-color: var(--point1);
+  display: none;
+}
+.subAni .btns button.on {
+  color: var(--point1);
+  font-weight: bold;
+}
+
+.subAni .btns button.on::before {
+  display: block;
+}
+.subAni > ul {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3.5rem;
+}
+/* .subAni > ul > li {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  cursor: pointer;
+} */
+.subAni .imgCon {
+  width: 100%;
+  padding-top: 400px;
+  position: relative;
+  border: 1px solid var(--gray2);
+}
+.subAni .imgCon > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.subAni > ul > li strong,
+.subAni > ul > li span {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+}
+
+.subAni > ul > li strong {
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding-top: 2.5rem;
+}
+.subAni > ul > li span:first-of-type {
+  color: var(--gray5);
+}
+.subAni > ul > li span:last-of-type {
+  font-size: 1.4rem;
+  color: var(--gray4);
+  padding-bottom: 50px;
+}

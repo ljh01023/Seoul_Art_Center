@@ -1,5 +1,5 @@
 import BtnTotal from '../components/BtnTotal';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import cssStyle from '../css/Ranking.module.css';

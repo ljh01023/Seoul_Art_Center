@@ -1,12 +1,10 @@
 import BtnTotal from '../components/BtnTotal';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import cssStyle from '../css/Special.module.css';
 
 export default function Special() {
   let aniData = useSelector((a) => a.anniverData);
-  let navigate = useNavigate();
   return (
     <main className='mw'>
       <section className={cssStyle.sec6}>

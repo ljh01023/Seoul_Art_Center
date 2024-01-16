@@ -1,10 +1,10 @@
+import CardCon from '../components/CardCon';
+import BtnTotal from '../components/BtnTotal';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import CardCon from '../components/CardCon';
-import BtnTotal from '../components/BtnTotal';
 
 export default function TicketOpen() {
   let totalData = useSelector((a) => a.datalist);
