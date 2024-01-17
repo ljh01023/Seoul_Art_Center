@@ -47,7 +47,9 @@
   position: relative;
   width: 100%;
   padding-top: 380px;
+  cursor: pointer;
 }
+
 .sec3 .imgCon > img {
   position: absolute;
   top: 0;

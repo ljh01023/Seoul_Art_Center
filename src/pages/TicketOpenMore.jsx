@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import cssStyle from '../css/TicketOpenMore.module.css';
 
 const searchIcon = (
@@ -13,6 +14,7 @@ export default function TicketOpenMore() {
   const [openList, setOpenList] = useState([]); // 정렬
   const [activeButton, setActiveButton] = useState('등록순'); //class on/off
   const [searchTerm, setSearchTerm] = useState(''); //검색창 상태관리
+  let navigate = useNavigate();
 
   // 날짜
   useEffect(() => {
@@ -94,7 +96,12 @@ export default function TicketOpenMore() {
         <ul>
           {openList &&
             openList.map((item) => (
-              <li key={item.id}>
+              <li
+                key={item.id}
+                onClick={() => {
+                  navigate(`/detail/${item.id}`);
+                }}
+              >
                 <span>티켓오픈</span>
                 <span>{item.title}</span>
                 <span>{item.openDate}</span>

@@ -4,6 +4,7 @@ import TicketOpenMore from './pages/TicketOpenMore';
 import RankingMore from './pages/RankingMore';
 import SpecialMore from './pages/SpecialMore';
 import Schedule from './pages/Schedule';
+import Detail from './pages/Detail';
 import Map from './pages/Map';
 import NotFound from './pages/NotFound';
 import { Routes, Route } from 'react-router-dom';
@@ -16,6 +17,7 @@ function App() {
         <Route path='ticket_open' element={<TicketOpenMore />} />
         <Route path='ranking' element={<RankingMore />} />
         <Route path='sac_program' element={<SpecialMore />} />
+        <Route path='detail/:id' element={<Detail />} />
         <Route path='map' element={<Map />} />
         <Route path='schedule' element={<Schedule />} />
       </Route>

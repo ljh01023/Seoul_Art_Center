@@ -1,5 +1,6 @@
 import BtnTotal from '../components/BtnTotal';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import cssStyle from '../css/Ranking.module.css';
@@ -8,6 +9,7 @@ export default function Ranking() {
   let totalData = useSelector((a) => a.datalist);
   let [rankData, setRankData] = useState(totalData);
   let [activeButton, setActiveButton] = useState('# 전체'); // 클래스 on/off
+  let navigate = useNavigate();
 
   return (
     <main className='mw'>
@@ -99,7 +101,12 @@ export default function Ranking() {
         <ul className={cssStyle.listCon}>
           {rankData.slice(0, 8).map((item, i) => (
             <li className={cssStyle.rankList} key={item.id}>
-              <div className={cssStyle.imgCon}>
+              <div
+                className={cssStyle.imgCon}
+                onClick={() => {
+                  navigate(`/detail/${item.id}`);
+                }}
+              >
                 <img src={`img/${item.image}`} alt={item.title} />
                 <span>{i + 1}</span>
               </div>

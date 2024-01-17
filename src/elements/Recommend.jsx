@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import cssStyle from '../css/Recommend.module.css';
 
 export default function Recommend() {
   let [img, setImg] = useState('image23.jpg');
   let reData = useSelector((a) => a.recomData);
+  let navigate = useNavigate();
 
   return (
     <main>
@@ -18,6 +20,9 @@ export default function Recommend() {
                   setImg(item.image);
                 }}
                 key={item.id}
+                onClick={() => {
+                  navigate(`/detail/${item.id}`);
+                }}
               >
                 <strong>{item.title}</strong>
                 <span>

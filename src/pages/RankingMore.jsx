@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import cssStyle from '../css/RankingMore.module.css';
 
 export default function RankingMore() {
   let totalData = useSelector((a) => a.datalist);
   let [rankData, setRankData] = useState(totalData); //filter
   let [activeButton, setActiveButton] = useState('전체');
+  let navigate = useNavigate();
 
   return (
     <main className='mw'>
@@ -26,9 +28,7 @@ export default function RankingMore() {
               className={activeButton === '뮤지컬 / 오페라' ? cssStyle.on : ''}
               onClick={() => {
                 setRankData(
-                  [...totalData].filter(
-                    (a) => a.category === '뮤지컬' || a.category === '오페라'
-                  )
+                  [...totalData].filter((a) => a.category === '뮤지컬' || a.category === '오페라')
                 );
                 setActiveButton('뮤지컬 / 오페라');
               }}
@@ -38,9 +38,7 @@ export default function RankingMore() {
             <li
               className={activeButton === '발레' ? cssStyle.on : ''}
               onClick={() => {
-                setRankData(
-                  [...totalData].filter((a) => a.category === '발레')
-                );
+                setRankData([...totalData].filter((a) => a.category === '발레'));
                 setActiveButton('발레');
               }}
             >
@@ -50,9 +48,7 @@ export default function RankingMore() {
               className={activeButton === '성악 / 연주회' ? cssStyle.on : ''}
               onClick={() => {
                 setRankData(
-                  [...totalData].filter(
-                    (a) => a.category === '성악' || a.category === '연주회'
-                  )
+                  [...totalData].filter((a) => a.category === '성악' || a.category === '연주회')
                 );
                 setActiveButton('성악 / 연주회');
               }}
@@ -63,9 +59,7 @@ export default function RankingMore() {
               className={activeButton === '전시 / 서예' ? cssStyle.on : ''}
               onClick={() => {
                 setRankData(
-                  [...totalData].filter(
-                    (a) => a.category === '전시' || a.category === '서예'
-                  )
+                  [...totalData].filter((a) => a.category === '전시' || a.category === '서예')
                 );
                 setActiveButton('전시 / 서예');
               }}
@@ -75,9 +69,7 @@ export default function RankingMore() {
             <li
               className={activeButton === '연극' ? cssStyle.on : ''}
               onClick={() => {
-                setRankData(
-                  [...totalData].filter((a) => a.category === '연극')
-                );
+                setRankData([...totalData].filter((a) => a.category === '연극'));
                 setActiveButton('연극');
               }}
             >
@@ -87,7 +79,12 @@ export default function RankingMore() {
         </nav>
         <ul className={cssStyle.rankCon}>
           {rankData.map((item, i) => (
-            <li key={item.id}>
+            <li
+              key={item.id}
+              onClick={() => {
+                navigate(`/detail/${item.id}`);
+              }}
+            >
               <span className={cssStyle.num}>{i + 1}</span>
               <div className={cssStyle.imgCon}>
                 <img src={`/img/${item.image}`} alt={item.title} />
