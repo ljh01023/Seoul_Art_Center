@@ -2,6 +2,7 @@
   margin-bottom: 100px;
 }
 .subMap .map {
+  border: 3px solid red;
   width: 100%;
   height: 350px;
   border-radius: 1rem 1rem 0 0;

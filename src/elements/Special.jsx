@@ -6,7 +6,7 @@ import cssStyle from '../css/Special.module.css';
 
 export default function Special() {
   let aniData = useSelector((a) => a.anniverData);
-  let navigate = useNavigate;
+  let navigate = useNavigate();
   return (
     <main className='mw'>
       <section className={cssStyle.sec6}>
@@ -22,7 +22,13 @@ export default function Special() {
         </div>
         <ul className={cssStyle.imgListCon}>
           {aniData.slice(0, 7).map((item) => (
-            <li className={cssStyle.imgCon} key={item.id}>
+            <li
+              className={cssStyle.imgCon}
+              key={item.id}
+              onClick={() => {
+                navigate(`/detail/${item.id}`);
+              }}
+            >
               <img src={`./img/${item.image}`} alt={item.title} />
             </li>
           ))}

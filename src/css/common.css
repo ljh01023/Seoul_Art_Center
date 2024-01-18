@@ -348,3 +348,90 @@ main h2 {
 }
 
 /* footer start */
+.ft {
+  margin-top: 77px;
+  font-size: 1.5rem;
+  color: var(--gray1);
+  padding-bottom: 4rem;
+  position: relative;
+}
+.ft::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1000px;
+  width: 5000px;
+  height: 700px;
+  background-color: #313131;
+  z-index: -10;
+}
+.ft .snsCon {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.ft .snsCon > li {
+  width: 60px;
+  padding-top: 60px;
+  position: relative;
+}
+.ft .snsCon > li::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -1000px;
+  width: 5000px;
+  height: 100px;
+  background-color: var(--gray5);
+  z-index: -1;
+}
+.ft .snsCon > li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ft .ftMenu {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 3rem 0 2rem 0;
+  position: relative;
+}
+.ft .ftMenu::before {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray4);
+}
+.ft .ftMenu li:hover {
+  color: var(--point1);
+}
+.ft .tel {
+  padding: 2rem 0;
+  font-weight: 600;
+}
+.ft .tel span {
+  padding-left: 2rem;
+  color: #393939;
+}
+.ft .address {
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.ft .address,
+.ft > p:last-of-type {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
