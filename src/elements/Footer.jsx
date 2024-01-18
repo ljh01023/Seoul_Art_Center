@@ -10,32 +10,37 @@ export default function Footer() {
         </li>
         <li>
           <Link>
-            <img src='/img/sns_instagram.png' alt='' />
+            <img src='/img/sns_facebook.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_instagram.png' alt='' />
+            <img src='/img/sns_youtube.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_instagram.png' alt='' />
+            <img src='/img/sns_naverBlog.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_instagram.png' alt='' />
+            <img src='/img/sns_naverPost.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_instagram.png' alt='' />
+            <img src='/img/sns_naverTv.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_instagram.png' alt='' />
+            <img src='/img/sns_pod.png' alt='' />
+          </Link>
+        </li>
+        <li>
+          <Link>
+            <img src='/img/sns_x.png' alt='' />
           </Link>
         </li>
       </ul>

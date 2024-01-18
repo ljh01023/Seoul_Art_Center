@@ -366,15 +366,16 @@ main h2 {
   z-index: -10;
 }
 .ft .snsCon {
+  height: calc(50px + 4rem);
   padding: 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3.5rem;
 }
 .ft .snsCon > li {
-  width: 60px;
-  padding-top: 60px;
+  width: 50px;
+  padding-top: 50px;
   position: relative;
 }
 .ft .snsCon > li::before {
@@ -383,7 +384,7 @@ main h2 {
   top: -20px;
   left: -1000px;
   width: 5000px;
-  height: 100px;
+  height: 90px;
   background-color: var(--gray5);
   z-index: -1;
 }
