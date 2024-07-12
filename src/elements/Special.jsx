@@ -29,7 +29,7 @@ export default function Special() {
                 navigate(`/detail/${item.id}`);
               }}
             >
-              <img src={`process.env.PUBLIC_URL + /img/${item.image}`} alt={item.title} />
+              <img src={process.env.PUBLIC_URL`/img/${item.image}`} alt={item.title} />
             </li>
           ))}
         </ul>

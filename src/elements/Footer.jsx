@@ -5,43 +5,39 @@ export default function Footer() {
       <ul className='snsCon'>
         <li>
           <Link>
-            <img src='process.env.PUBLIC_URL/img/sns_instagram.png' alt='' />
+            {/* <img src={process.env.PUBLIC_URL`/img/sns_instagram.png' alt='인스타그램'`} /> */}
           </Link>
         </li>
         <li>
           <Link>
-            <img src='process.env.PUBLIC_URL/img/sns_facebook.png' alt='' />
+            {/* <img src={process.env.PUBLIC_URL`/img/${sns_facebook.png} alt=${페이스북}`} /> */}
           </Link>
         </li>
         <li>
           <Link>
-            <img src='process.env.PUBLIC_URL/img/sns_youtube.png' alt='' />
+            {/* <img src='process.env.PUBLIC_URL`/img/sns_youtube.png' alt='유튜브' `/> */}
           </Link>
         </li>
         <li>
           <Link>
-            <img src='process.env.PUBLIC_URL/img/sns_naverBlog.png' alt='' />
+            {/* <img src='process.env.PUBLIC_URL`/img/sns_naverBlog.png' alt='네이버블로그'` /> */}
           </Link>
         </li>
         <li>
           <Link>
-            <img src='process.env.PUBLIC_URL/img/sns_naverPost.png' alt='' />
+            {/* <img src='process.env.PUBLIC_URL`/img/sns_naverPost.png' alt='네이버포스트' `/> */}
           </Link>
         </li>
         <li>
           <Link>
-            <img src='process.env.PUBLIC_URL/img/sns_naverTv.png' alt='' />
+            {/* <img src='process.env.PUBLIC_URL`/img/sns_naverTv.png' alt='네이버TV' `/> */}
           </Link>
         </li>
         <li>
-          <Link>
-            <img src='process.env.PUBLIC_URL/img/sns_pod.png' alt='' />
-          </Link>
+          <Link>{/* <img src='process.env.PUBLIC_URL`/img/sns_pod.png' alt='pod' `/> */}</Link>
         </li>
         <li>
-          <Link>
-            <img src='process.env.PUBLIC_URL/img/sns_x.png' alt='' />
-          </Link>
+          <Link>{/* <img src='process.env.PUBLIC_URL`/img/sns_x.png' alt='x'` /> */}</Link>
         </li>
       </ul>
       <ul className='ftMenu'>

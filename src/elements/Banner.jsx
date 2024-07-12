@@ -21,7 +21,7 @@ export default function Banner() {
             return (
               <SwiperSlide key={item.id}>
                 <div className={cssStyle.slideCon}>
-                  <img src={`process.env.PUBLIC_URL + /img/${item.image}`} alt={item.title} />
+                  <img src={process.env.PUBLIC_URL`/img/${item.image} alt=${item.title}`} />
                 </div>
                 <div className={cssStyle.des}>
                   <p>{item.title}</p>
