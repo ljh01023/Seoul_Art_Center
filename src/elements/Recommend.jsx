@@ -11,7 +11,7 @@ export default function Recommend() {
   return (
     <main>
       <section className={cssStyle.sec4}>
-        <h2>추천 공연・전시</h2>
+        <h2>추천 공연&amp;전시</h2>
         <div className={cssStyle.reInner}>
           <ul className={cssStyle.listCon}>
             {reData.map((item) => (
@@ -34,7 +34,7 @@ export default function Recommend() {
             ))}
           </ul>
           <div className={cssStyle.imgCon}>
-            <img src={`/img/${img}`} alt={img.title} />
+            <img src={`process.env.PUBLIC_URL/img/${img}`} alt={img.title} />
           </div>
         </div>
       </section>

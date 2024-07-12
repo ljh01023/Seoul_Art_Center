@@ -1,20 +1,13 @@
-import { useNavigate } from 'react-router-dom';
-
-export default function CardCon({ item }) {
-  const navigate = useNavigate();
-
+export default function CardCon({ item, i }) {
   return (
-    <div className='cardCon'>
-      <div
-        className='imgCon'
-        onClick={() => {
-          navigate(`/detail/${item.id}`);
-        }}
-      >
-        <img src={`img/${item.image}`} alt={item.title} />
+    <div className='cardInner'>
+      <div className='cardCon'>
+        <div className='imgCon'>
+          <img src={`process.env.PUBLIC_URL/img/${item.image}`} alt={item.title} />
+        </div>
+        <p className='title'>{item.title}</p>
+        <p className='date'>{item.startDate}</p>
       </div>
-      <p className='title'>{item.title}</p>
-      <p className='date'>{item.startDate}</p>
     </div>
   );
 }

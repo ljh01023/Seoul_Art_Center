@@ -5,42 +5,42 @@ export default function Footer() {
       <ul className='snsCon'>
         <li>
           <Link>
-            <img src='/img/sns_instagram.png' alt='' />
+            <img src='process.env.PUBLIC_URL/img/sns_instagram.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_facebook.png' alt='' />
+            <img src='process.env.PUBLIC_URL/img/sns_facebook.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_youtube.png' alt='' />
+            <img src='process.env.PUBLIC_URL/img/sns_youtube.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_naverBlog.png' alt='' />
+            <img src='process.env.PUBLIC_URL/img/sns_naverBlog.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_naverPost.png' alt='' />
+            <img src='process.env.PUBLIC_URL/img/sns_naverPost.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_naverTv.png' alt='' />
+            <img src='process.env.PUBLIC_URL/img/sns_naverTv.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_pod.png' alt='' />
+            <img src='process.env.PUBLIC_URL/img/sns_pod.png' alt='' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src='/img/sns_x.png' alt='' />
+            <img src='process.env.PUBLIC_URL/img/sns_x.png' alt='' />
           </Link>
         </li>
       </ul>

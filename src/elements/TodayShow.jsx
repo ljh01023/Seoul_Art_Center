@@ -19,7 +19,7 @@ export default function TodayShow() {
   return (
     <main className='mw'>
       <section className='sec5'>
-        <h2>오늘의 공연·전시</h2>
+        <h2>오늘의 공연&amp;전시</h2>
         {matchingData && matchingData.length > 0 ? (
           <Swiper
             slidesPerView={4}
