@@ -34,7 +34,7 @@ export default function Recommend() {
             ))}
           </ul>
           <div className={cssStyle.imgCon}>
-            <img src={`process.env.PUBLIC_URL/img/${img}`} alt={img.title} />
+            <img src={`process.env.PUBLIC_URL + /img/${img}`} alt={img.title} />
           </div>
         </div>
       </section>
