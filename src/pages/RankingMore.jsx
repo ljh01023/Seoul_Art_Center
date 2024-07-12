@@ -87,7 +87,7 @@ export default function RankingMore() {
             >
               <span className={cssStyle.num}>{i + 1}</span>
               <div className={cssStyle.imgCon}>
-                <img src={process.env.PUBLIC_URL`/img/${item.image} alt=${item.title}`} />
+                <img src={process.env.PUBLIC_URL + `/img/${item.image} alt=${item.title}`} />
               </div>
               <strong>{item.title}</strong>
               <span className={cssStyle.place}>{item.place}</span>

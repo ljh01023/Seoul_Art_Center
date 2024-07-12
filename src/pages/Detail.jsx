@@ -10,7 +10,7 @@ export default function Detail() {
   return (
     <section className={`mw ${cssStyle.detail}`}>
       <div className={cssStyle.imgCon}>
-        <img src={process.env.PUBLIC_URL`/img/${item.image}`} alt='' />
+        <img src={process.env.PUBLIC_URL + `/img/${item.image}`} alt='' />
       </div>
       <div className={cssStyle.desc}>
         <p className={cssStyle.category}>{item.category}</p>
