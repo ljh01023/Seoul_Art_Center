@@ -6,17 +6,19 @@ export default function Footer() {
         <li>
           <Link>
             {/* <img src={process.env.PUBLIC_URL`/img/sns_instagram.png alt=${인스타그램}`} /> */}
-            <img src={process.env.PUBLIC_URL + `/img/sns_instagram.png alt=${인스타그램}`} />
+            <img src='/img/sns_instagra.png' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src={process.env.PUBLIC_URL + `/img/sns_facebook.png alt=${페이스북}`} />
+            {/* <img src={process.env.PUBLIC_URL + `/img/sns_facebook.png alt=${페이스북}`} /> */}
+            <img src='/img/sns_instagra.png' />
           </Link>
         </li>
         <li>
           <Link>
-            <img src={process.env.PUBLIC_URL + `/img/sns_youtube.png alt=${유튜브}`} />
+            {/* <img src={process.env.PUBLIC_URL + `/img/sns_youtube.png alt=${유튜브}`} /> */}
+            <img src='/img/sns_instagra.png' />
           </Link>
         </li>
       </ul>
