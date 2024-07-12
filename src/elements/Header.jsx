@@ -34,6 +34,7 @@ export default function Header() {
         className='logo'
       >
         {/* <img src={process.env.PUBLIC_URL '/ img/logo.png alt="logo"'} /> */}
+        <img src={process.env.PUBLIC_URL`/img/logo.png alt=${logo}`} />
       </h1>
       <nav>
         <ul className='gnb'>

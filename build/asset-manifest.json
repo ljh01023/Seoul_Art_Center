@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Seoul_Art_Center/static/css/main.403af287.css",
+    "main.js": "/Seoul_Art_Center/static/js/main.058e665d.js",
+    "static/js/787.c08b7e9c.chunk.js": "/Seoul_Art_Center/static/js/787.c08b7e9c.chunk.js",
+    "index.html": "/Seoul_Art_Center/index.html",
+    "main.403af287.css.map": "/Seoul_Art_Center/static/css/main.403af287.css.map",
+    "main.058e665d.js.map": "/Seoul_Art_Center/static/js/main.058e665d.js.map",
+    "787.c08b7e9c.chunk.js.map": "/Seoul_Art_Center/static/js/787.c08b7e9c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.403af287.css",
+    "static/js/main.058e665d.js"
+  ]
+}
