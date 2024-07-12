@@ -5,12 +5,12 @@ export default function Footer() {
       <ul className='snsCon'>
         <li>
           <Link>
-            {/* <img src={process.env.PUBLIC_URL`/img/sns_instagram.png' alt='인스타그램'`} /> */}
+            <img src={process.env.PUBLIC_URL '/ img/sns_instagram.png alt="인스타그램"'} />
           </Link>
         </li>
         <li>
           <Link>
-            {/* <img src={process.env.PUBLIC_URL`/img/${sns_facebook.png} alt=${페이스북}`} /> */}
+            <img src={process.env.PUBLIC_URL '/ img/sns_facebook.png alt="페이스북"'} />
           </Link>
         </li>
         <li>

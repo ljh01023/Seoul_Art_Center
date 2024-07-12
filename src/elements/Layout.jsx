@@ -1,5 +1,5 @@
-import Header from './Header';
-import Footer from './Footer';
+// import Header from './Header';
+// import Footer from './Footer';
 import ScrollTop from '../components/ScrollTop';
 import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -25,9 +25,9 @@ export default function Layout() {
 
   return (
     <div className='wrap'>
-      <Header />
+      {/* <Header /> */}
       <Outlet></Outlet>
-      <Footer />
+      {/* <Footer /> */}
       {showScrollTop && <ScrollTop />}
     </div>
   );
